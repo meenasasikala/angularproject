@@ -9,7 +9,9 @@ export class HeaderComponent implements OnInit {
   twoway:any;
   
   isdisabled:boolean=true;
-
+  isActive:boolean=true;
+  // inactive:boolean=true;
+  languages=[{languageid:1,languagename:'c'},{languageid:2,languagename:'c++'},{languageid:3,languagename:'java'},{languageid:4,languagename:'react'}]
   constructor() { }
 
 
@@ -23,6 +25,9 @@ export class HeaderComponent implements OnInit {
   oninput(event:any){
     this.isdisabled=false;
     console.log(event)
+  }
+  toggle(){
+    this.isdisabled = !this.isdisabled
   }
   
 }
