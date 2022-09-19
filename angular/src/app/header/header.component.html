@@ -1,0 +1,16 @@
+<p>header works!</p>
+
+
+<div class="two">
+    <div>
+        username <input type="text" [(ngModel)]="twoway"  (keyup)="oninput($event)">
+    </div>
+    <div>
+        <h2>twoway</h2>
+    </div>
+    <div>
+        {{twoway}}
+    </div>
+    
+        <button [disabled]="isdisabled"(click)="onbtn()">click</button>
+    </div>
