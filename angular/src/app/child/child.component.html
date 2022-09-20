@@ -1,0 +1,16 @@
+<!-- <p>child works!</p>> -->
+<div class="">
+    <!-- <p>{{userindex}}</p> -->
+    <div class="profile-pic">
+        <img [src]="users.avatar" alt="">
+    </div>
+    
+    <div class="user-details">
+        <p class="user-name"> {{users.first_name}} {{users.last_name}} </p>
+        <p class="user-email">{{users.email}}</p>
+    </div>
+    <div class="cta">
+        <button class="remove-user" (click)="removeUser()">Remove User</button>
+    </div>
+</div>
+

@@ -13,32 +13,38 @@
     </div>
     
         <button [disabled]="isdisabled"(click)="onbtn()">click</button>
-    </div>
+    </div> 
 
 
-    <p> Directives </p>
+    <p> Directives </p> 
 
-    <!-- <p [ngStyle]="{'font-size' :isactive?'30px':'100px'}">This contain ng style directive</p>  -->
-    <!-- <p (click)="isActive=!isActive" [ngClass]="isActive?'isActive':'inActive'">This  contains ng class directive</p> -->
+     <!-- <p [ngStyle]="{'font-size' :isactive?'30px':'100px'}">This contain ng style directive</p>  --> 
+     <!-- <p (click)="isActive=!isActive" [ngClass]="isActive?'isActive':'inActive'">This  contains ng class directive</p> --> 
     
 
-<!-- //-------------------------if condition using template------------------// -->
+ <!-- //-------------------------if condition using template------------------// -->
     
 
-   <!-- <P *ngIf="isActive; else falsecondition ">condition is true in directive</P> -->
-   <!-- <ng-template #falsecondition > condition false else block</ng-template> -->
+    <P *ngIf="isActive; else falsecondition ">condition is true in directive</P> 
+    <ng-template #falsecondition > condition false else block</ng-template> 
 
 
    <!-- //----------------if condition without template----------------------// -->
 
    <P *ngIf="isActive">Condition is true in directive</P>
-   <P *ngIf="!isActive">This is the else block</P> 
+   <P *ngIf="!isActive">This is the else block</P>  
 
    
     <!-- //-----------------------for condtion------------------------------// -->
-    <ul>
+     <ul>
         <li *ngFor="let l of languages;index as i;first as isfirst;last as islast;even as iseven;odd as isodd"> {{l.languagename}} {{i}}  {{isfirst}} {{islast}} {{iseven}} {{isodd}}
             <span [ngClass]="isfirst?'isActive':''"> language</span>
         </li>
-    </ul>
+    </ul> 
+
+
+
+
+
+    
     
