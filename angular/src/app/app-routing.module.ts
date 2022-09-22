@@ -13,23 +13,27 @@ const routes: Routes = [
   children:[
     {
       path:'comp1',
-      component:Component1Component,children:[
+      component:Component1Component,
+      children:[
         {
           path:'parent',
           component:ParentComponent,
-        }
+        },
+        ]
+    },
+       {
+        path:'comp2',
+        component:Component2Component,
+      },
+      {
+        path:':user',
+        component:Component1Component,
+      },
+      
+    
       ]
     },
-    {
-      path:'comp2',
-      component:Component2Component,
-    },
-    {
-      path:':user',
-      component:Component1Component,
-    },
-  ]
-},
+    
   {
    
   path:'contactus',

@@ -12,6 +12,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { Component2Component } from './component2/component2.component';
     AboutusComponent,
     ContactusComponent,
     Component1Component,
-    Component2Component
+    Component2Component,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
