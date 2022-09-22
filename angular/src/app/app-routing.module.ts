@@ -23,7 +23,11 @@ const routes: Routes = [
     {
       path:'comp2',
       component:Component2Component,
-    }
+    },
+    {
+      path:':user',
+      component:Component1Component,
+    },
   ]
 },
   {
