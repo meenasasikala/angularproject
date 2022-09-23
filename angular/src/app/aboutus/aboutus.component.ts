@@ -11,8 +11,14 @@ export class AboutusComponent implements OnInit {
   constructor(private root:Router) { }
 
   ngOnInit(): void {
+   setTimeout(() => {
+    this.root.navigate(['parent'])
+   }, 2000);
+
+   
   }
-   navigateToParent(){
-    this.root.navigate(["parent"])
-   }
+  //  navigateToParent(){
+  //   console.log("stalin")
+  //   this.root.navigate(['parent'])
+  //  }
 }

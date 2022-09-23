@@ -15,12 +15,6 @@ const routes: Routes = [
       {
         path: 'comp1',
         component: Component1Component,
-        children: [
-          {
-            path: 'parent',
-            component: ParentComponent,
-          },
-        ]
       },
       {
         path: 'comp2',
@@ -33,7 +27,11 @@ const routes: Routes = [
 
     ]
   },
-  { path: ':comp3', redirectTo: '/contactus', pathMatch: 'full' },
+  {
+    path: 'parent',
+    component: ParentComponent,
+  },
+  // { path: ':comp3', redirectTo: '/contactus', pathMatch: 'full' },
 
   {
 
