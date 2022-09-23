@@ -1,4 +1,4 @@
-import {  NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 
@@ -8,43 +8,42 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { ParentComponent } from './parent/parent.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 const routes: Routes = [
-{
-  path:'aboutus',
-  component:AboutusComponent,
-  children:[
-    {
-      path:'comp1',
-      component:Component1Component,
-      children:[
-        {
-          path:'parent',
-          component:ParentComponent,
-        },
+  {
+    path: 'aboutus',
+    component: AboutusComponent,
+    children: [
+      {
+        path: 'comp1',
+        component: Component1Component,
+        children: [
+          {
+            path: 'parent',
+            component: ParentComponent,
+          },
         ]
-    },
-       {
-        path:'comp2',
-        component:Component2Component,
       },
       {
-        path:':user',
-        component:Component1Component,
+        path: 'comp2',
+        component: Component2Component,
       },
-      
-    
-      ]
-    },
-    { path: ':comp3',   redirectTo: '/contactus', pathMatch: 'full' }, 
-    
+      {
+        path: ':user',
+        component: Component1Component,
+      },
+
+    ]
+  },
+  { path: ':comp3', redirectTo: '/contactus', pathMatch: 'full' },
+
   {
-   
-  path:'contactus',
-  component:ContactusComponent,
-},
-{
-  path:'**',
-  component:PagenotfoundComponent,
-}
+
+    path: 'contactus',
+    component: ContactusComponent,
+  },
+  {
+    path: '**',
+    component: PagenotfoundComponent,
+  }
 ]
 
 
