@@ -6,6 +6,7 @@ import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ParentComponent } from './parent/parent.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 const routes: Routes = [
 {
   path:'aboutus',
@@ -33,11 +34,16 @@ const routes: Routes = [
     
       ]
     },
+    { path: ':comp3',   redirectTo: '/contactus', pathMatch: 'full' }, 
     
   {
    
   path:'contactus',
   component:ContactusComponent,
+},
+{
+  path:'**',
+  component:PagenotfoundComponent,
 }
 ]
 
