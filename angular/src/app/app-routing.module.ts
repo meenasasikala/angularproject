@@ -7,6 +7,7 @@ import { Component2Component } from './component2/component2.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ParentComponent } from './parent/parent.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { UserslistComponent } from './userlist/userslist.component';
 const routes: Routes = [
   {
     path: 'aboutus',
@@ -15,24 +16,27 @@ const routes: Routes = [
       {
         path: 'comp1',
         component: Component1Component,
+        children:[
+          {
+            path: 'parent',
+            component: ParentComponent,
+          }
+        ]
       },
       {
         path: 'comp2',
         component: Component2Component,
       },
       {
-        path: ':user',
-        component: Component1Component,
-      },
+        path:'userlist',
+        component:UserslistComponent
+      }
 
     ]
   },
-  {
-    path: 'parent',
-    component: ParentComponent,
-  },
+  
   // { path: ':comp3', redirectTo: '/contactus', pathMatch: 'full' },
-
+ 
   {
 
     path: 'contactus',
