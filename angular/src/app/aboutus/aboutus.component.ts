@@ -19,8 +19,9 @@ export class AboutusComponent implements OnInit {
 
    
   }
-   navigateToParent(){
-    // console.log("stalin")
-   this.root.navigate(['parent'],{relativeTo:this.active})
-   }
 }
+//    navigateToParent(){
+//     // console.log("stalin")
+//    this.root.navigate(['parent'],{relativeTo:this.active})
+//    }
+

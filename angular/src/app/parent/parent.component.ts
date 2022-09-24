@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 interface User {
   id : number,
   email : string,
@@ -67,3 +68,4 @@ userRemoved(usersindex:any){
   this.usersList.splice(usersindex,1)
 }
 }
+ 

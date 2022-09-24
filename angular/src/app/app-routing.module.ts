@@ -29,7 +29,7 @@ const routes: Routes = [
         component: Component2Component,
       },
       {
-        path:':userlist',
+        path:'userlist',
         component:UserslistComponent
       }
 
@@ -43,11 +43,11 @@ const routes: Routes = [
     path: 'contactus',
     component: ContactusComponent,
   },
-  {
-    path:'newmodule',
-    loadChildren:()=>import('./newmodule/newmodule-routing.module').then(m=>m.NewmoduleRoutingModule)
+  // {
+  //   path:'newmodule',
+  //   loadChildren:()=>import('./newmodule/newmodule-routing.module').then(m=>m.NewmoduleRoutingModule)
     
-  },
+  // },
   {
     path: '**',
     component: PagenotfoundComponent,
