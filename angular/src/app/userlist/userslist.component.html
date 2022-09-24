@@ -5,11 +5,11 @@
                 
             </div>
             <div class="employee-details">
-                <div class="employee-name"> {{employee.id}} - {{employee.first_name}} {{employee.last_name}} </div>
-                <div class="employee-email"> {{employee.email}} </div>
+                <div class="employee-name"> {{employee.id}} - </div>
+                <div class="employee-email">  </div>
             </div>
-            <div class="cta">
-                <button (click)="removeUser(i)"> <a [routerLink]='["user",employee.first_name]'>Remove user</a></button>
+            <div class="remove">
+                <button (click)="removeUser(i)"> <a [routerLink]='["user",employee.id]'>Remove user</a></button>
             </div>
         </div>
 </ng-container>

@@ -8,6 +8,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { ParentComponent } from './parent/parent.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { UserslistComponent } from './userlist/userslist.component';
+import { TestComponent } from './newmodule/test/test.component';
 const routes: Routes = [
   {
     path: 'aboutus',
@@ -28,7 +29,7 @@ const routes: Routes = [
         component: Component2Component,
       },
       {
-        path:'userlist',
+        path:':userlist',
         component:UserslistComponent
       }
 
@@ -41,6 +42,11 @@ const routes: Routes = [
 
     path: 'contactus',
     component: ContactusComponent,
+  },
+  {
+    path:'newmodule',
+    loadChildren:()=>import('./newmodule/newmodule-routing.module').then(m=>m.NewmoduleRoutingModule)
+    
   },
   {
     path: '**',
